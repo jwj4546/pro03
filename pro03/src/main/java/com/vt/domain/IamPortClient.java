@@ -14,7 +14,7 @@ import lombok.ToString;
  public class IamPortClient { 
 	 public final static String CODE = "imp33642125"; 
 	 public final static String KEY = "8006731832536307"; 
-	 public final static String SECRET = "Rzaw0rU4BFImk2cqDjAGXcGywGGgAzLfy16909OPBxtvdxzEe1zzWonqmoQwdbiJN45sSaGqTXc1BMJs"; 
+	 public final static String SECRET = ""; 
 	 
 	 private String randChar;
 	 

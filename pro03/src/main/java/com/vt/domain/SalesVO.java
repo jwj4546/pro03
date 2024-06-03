@@ -7,13 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Sales {
+public class SalesVO {
 	private int sno;
 	private int pno;
-	private Product product;
 	private int amount;
 	private int tot;
-	private Member member;
+	private String id;
 	private String paymethod;
 	private String paynum;
 	private String addr;
@@ -26,4 +25,11 @@ public class Sales {
 	private String resdate;
 	private String gtid;
 	private String rname;
+	private String name;
+	private String pname;
+	private String category;
+	private String com;
+	private String img;
+	private String img2;
+	private String img3;
 }

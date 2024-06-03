@@ -20,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.vt.biz.ProductBiz;
 import com.vt.domain.Product;
+import com.vt.domain.ProductVO;
 
 @Controller
 @RequestMapping("/product/")
@@ -121,7 +122,7 @@ public class ProductController {
 			@RequestParam("img2") MultipartFile img2, @RequestParam("img3") MultipartFile img3, HttpServletRequest request,
 			HttpServletResponse response, Model model) {
 		
-		Product before = productService.getProduct(pno);
+		ProductVO before = productService.getProduct(pno);
 		
 		String uploadDir = request.getServletContext().getRealPath(uploadLoc);
 		File dir = new File(uploadDir);

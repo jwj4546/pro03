@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.vt.domain.Product;
+import com.vt.domain.ProductVO;
 
 @Repository
 public class ProductDAO implements ProductMapper {
@@ -20,18 +21,18 @@ public class ProductDAO implements ProductMapper {
 	}
 
 	@Override
-	public List<Product> getProductList() {
+	public List<ProductVO> getProductList() {
 		return sqlSession.selectList("product.getProductList");
 	}
 	
 
 	@Override
-	public List<Product> getCategoryList(String category) {
+	public List<ProductVO> getCategoryList(String category) {
 		return sqlSession.selectList("product.getCategoryList", category);
 	}
 
 	@Override
-	public Product getProduct(int pno) {
+	public ProductVO getProduct(int pno) {
 		return sqlSession.selectOne("product.getProduct", pno);
 	}
 

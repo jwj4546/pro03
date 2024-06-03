@@ -39,12 +39,19 @@ select * from product;
 drop sequence pnoSeq;
 alter table product modify(com varchar(3000));
 
+create view productvo as (select p.pno as pno, p.category as category, p.pname as pname,p.com as com, p.img as img, p.img2 as img2, p.img3 as img3,
+avg(i.iprice) as iprice, max(i.oprice) as oprice, sum(i.amount) as amount from product p, inventory i where p.pno=i.pno group by p.pno, p.category, p.pname, p.com, p.img, p.img2, p.img3); 
+
 
 create table inventory(ino int primary key, pno int, iprice int default 1000, oprice int default 1000, amount int default 1, remark varchar2(200));
 create sequence inoSeq start with 1 increment by 1 maxvalue 5000 minvalue 1 cycle;
 alter table inventory add constraints fk_pno foreign key(pno) references product(pno);
 alter table inventory add resdate timestamp default sysdate;
+insert into inventory values(inoSeq.nextval, 19, 28000, 32000, 20, '재고있음', '2025.06.03');
+select * from inventory;
 
+create view inventoryvo as (select i.ino as ino, i.pno as pno, p.pname as pname, avg(i.iprice) as iprice, max(i.oprice) as oprice, sum(i.amount) as amount, 
+i.remark as remark, max(i.resdate) as resdate from inventory i, product p where i.pno=p.pno group by i.ino, p.pname, i.remark, i.pno);
 
 create table sales(sno int primary key, pno int, amount int default 1, tot int, id varchar2(20), paymethod varchar2(20), paynum varchar2(30), addr varchar2(300), tel varchar2(100), delcom varchar2(50), deltel varchar2(50), delno varchar2(50), delstatus varchar2(20), st varchar2(20));
 alter table sales add constraints fk_mem3 foreign key(id) references member(id);
