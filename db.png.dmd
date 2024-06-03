@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="db.png" id="BE381EC5-193B-BA21-6B48-146FEE57F53E" version="3.5">
+<createdBy>wooji</createdBy>
+<createdTime>2024-05-22 06:51:50 UTC</createdTime>
+<ownerDesignName>db.png</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BE381EC5-193B-BA21-6B48-146FEE57F53E</designId>
+</OSDM_Design>

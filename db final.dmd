@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="db final" id="E1358886-DC5E-4C0C-6A5D-F727C962053B" version="3.5">
+<createdBy>wooji</createdBy>
+<createdTime>2024-05-22 14:09:18 UTC</createdTime>
+<ownerDesignName>db final</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E1358886-DC5E-4C0C-6A5D-F727C962053B</designId>
+</OSDM_Design>
