@@ -41,7 +41,7 @@ public class ReviewController {
 	private ReviewService memberService;
 	
 	//@Autowired
-	//private Review Service productService;
+	//private ReviewService productService;
 	
 	@RequestMapping("list.do")
 	public String getReviewList(Model model) {

@@ -80,7 +80,7 @@
           <a class="navbar-item" href="${path2 }/notice/list.do">
             Notice
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item" href="${path2 }/review/list.do">
             Review
           </a>
           <a class="navbar-item">

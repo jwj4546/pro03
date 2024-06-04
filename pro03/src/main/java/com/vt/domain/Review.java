@@ -15,4 +15,21 @@ public class Review {
 	private Member member;
 	private int hits;
 	private String resdate;
+	private int starRating;
+	
+	public String getPname() {
+		if(product != null) {
+			return product.getPname();
+		} else {
+			return null;
+		}
+	}
+	public String getId() {
+		if(member != null) {
+			return member.getId();
+		} else {
+			return null;
+		}
+	}
 }
+	

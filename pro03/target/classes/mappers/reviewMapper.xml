@@ -16,20 +16,19 @@
 	
 	<!--리뷰 조회 -->
 	<select id="getReviewList" parameterType="pagingBean" resultMap="reviewRM">
-		select r.no, p.pname, r.title, r.content, m.id, r.hits, r.resdate from review r, member m, product p where r.id=m.id order by r.resdate desc  
-		limit #{startRowNumber}, #{contentNumberPerPage}  
+		select * from review order by no desc
 	</select>	
 	
 	<!-- 리뷰 상세 보기 -->
 	<select id="getReview" resultMap="reviewRM">
-		select r.no, p.pname, r.title, r.content, m.id, r.hits, r.resdate 
+		select r.no, p.pname, r.title, r.content, m.id, r.hits, r.resdate, r.starRating 
 		from review r, member m, product p 
 		where r.id=m.id and no=#{no}
 	</select>
 	
 	
 	<insert id="insReview">
-		insert into Review values (rnoSeq.nextval, #{pname}, #{title}, #{content}, #{id}, default, default)
+		insert into Review values (rnoSeq.nextval, #{product.pname, jdbcType=VARCHAR}, #{title}, #{content}, #{member.id, jdbcType=VARCHAR}, default, default, #{starRating, jdbcType=INTEGER})
 	</insert>
 	<update id="upReview">
 		update Review set title=#{title}, content=#{content}, pname=#{pname} where no=#{no}
